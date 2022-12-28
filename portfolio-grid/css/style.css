@@ -23,7 +23,14 @@
   color: #fff;
   background: #000;
 }
-
+.dark-mode {
+  color: #fff;
+  /* change the background color to a dark color */
+  background-color: #333;
+  
+  /* change the text color to a light color */
+  
+}
 @media (min-width: 1199px) {
   .port-item {
     padding: 3em !important;
