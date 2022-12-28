@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap Theme</title>
@@ -86,7 +85,7 @@
         <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut!</p>
       </div>
 
-      <div class="card card-body dark-mode py-5">
+      <div class="card card-body py-5 dark-mode" id="dark-mode-container">
         <h3>My Skills</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus ea excepturi officia quisquam atque eos.</p>
         <hr>
@@ -120,12 +119,12 @@
         <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut!</p>
       </div>
 
-      <div class="card card-body dark-mode py-5">
+      <div class="card card-body py-5" >
         <h3>Where Have I Worked?</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque similique saepe inventore rem vitae esse.</p>
         <div class="card-deck">
           <div class="card">
-            <div class="card-body dark-mode">
+            <div class="card-body " id="dark-mode-container" >
               <h4 class="card-title ">Devmasters</h4>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, magnam.</p>
               <p class="p-2 mb-3 bg-dark text-white">
@@ -135,13 +134,13 @@
                 Phone: (444) 444-4444
               </p>
             </div>
-            <div class="card-footer dark-mode">
+            <div class="card-footer " id="dark-mode-container">
               <h6 class="text-muted">Dates: 2015 - 2018</h6>
             </div>
           </div>
 
           <div class="card ">
-            <div class="card-body dark-mode">
+            <div class="card-body " id="dark-mode-container">
               <h4 class="card-title ">123 Designs</h4>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, magnam.</p>
               <p class="p-2 mb-3 bg-dark text-white">
@@ -151,13 +150,13 @@
                 Phone: (222) 222-2222
               </p>
             </div>
-            <div class="card-footer dark-mode">
+            <div class="card-footer " id="dark-mode-container">
               <h6 class="text-muted ">Dates: 2013 - 2015</h6>
             </div>
           </div>
 
           <div class="card ">
-            <div class="card-body dark-mode">
+            <div class="card-body " id="dark-mode-container">
               <h4 class="card-title">Web Designer Pros</h4>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, magnam.</p>
               <p class="p-2 mb-3 bg-dark text-white">
@@ -167,7 +166,7 @@
                 Phone: (333) 333-3333
               </p>
             </div>
-            <div class="card-footer dark-mode">
+            <div class="card-footer" id="dark-mode-container">
               <h6 class="text-muted">Dates: 2010 - 2013</h6>
             </div>
           </div>
@@ -182,7 +181,7 @@
         <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut!</p>
       </div>
 
-      <div class="card card-body py-5 dark-mode">
+      <div class="card card-body py-5 " id="dark-mode-container">
         <h3>What Have I Built?</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nostrum repudiandae debitis, nam iste amet.</p>
         <div class="row no-gutters">
@@ -240,7 +239,7 @@
         <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut!</p>
       </div>
 
-      <div class="card card-body py-5 dark-mode">
+      <div class="card card-body py-5 " id="dark-mode-container">
         <h3>Get In Touch</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos illo, dicta id voluptates enim.</p>
         <form>
@@ -313,20 +312,17 @@
       e.preventDefault();
       $(this).ekkoLightbox();
     });
-  </script>
-  <script>
     const toggleDarkMode = () => {
   const body = document.body;
-  const div = document.div;
   body.classList.toggle('dark-mode');
-  div.classList.toggle('dark-mode');
-
+  const container = document.getElementById('dark-mode-container');
+  container.classList.toggle('dark-mode');
 };
-
 const button = document.getElementById('toggle-dark-mode');
 button.addEventListener('click', toggleDarkMode);
-
   </script>
+
+
 </body>
 
 </html>

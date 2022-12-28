@@ -25,12 +25,29 @@
 }
 .dark-mode {
   color: #fff;
-  /* change the background color to a dark color */
   background-color: #333;
-  
-  /* change the text color to a light color */
-  
 }
+#dark-mode-container.dark-mode > div {
+  /* apply the dark mode styles to the inner div elements */
+  background-color: #333;
+  color: #fff;
+}
+#dark-mode-container > div {
+  /* apply the dark mode styles to the inner div elements */
+  background-color: #333;
+  color: #fff;
+}
+.dark-mode .card {
+  /* override the default Bootstrap styles for the card class */
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .card .card-body {
+  background-color: #333;
+  color: #fff;
+}
+  
 @media (min-width: 1199px) {
   .port-item {
     padding: 3em !important;
